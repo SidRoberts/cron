@@ -1,0 +1,17 @@
+language: php
+
+php:
+  - 7.0
+
+sudo: false
+
+install:
+  - composer update --quiet
+
+script:
+  - php vendor/bin/codecept run unit
+  - find src/ -type f -print0 | xargs -0 -n1 php -l
+
+notifications:
+  email:
+    - sid@sidroberts.co.uk
