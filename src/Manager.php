@@ -11,9 +11,6 @@ class Manager
 
 
 
-    /**
-     * @param Job $job
-     */
     public function add(Job $job)
     {
         $this->jobs[] = $job;
@@ -21,8 +18,6 @@ class Manager
 
     /**
      * @param \DateTime|string $now
-     *
-     * @return array
      */
     public function getDueJobs($now = null) : array
     {
@@ -38,9 +33,6 @@ class Manager
         return $jobs;
     }
 
-    /**
-     * @return array
-     */
     public function getAllJobs() : array
     {
         return $this->jobs;

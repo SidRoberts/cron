@@ -18,8 +18,7 @@ class Job
 
 
     /**
-     * @param string $expression
-     * @param mixed  $data
+     * @param mixed $data
      */
     public function __construct(string $expression, $data)
     {
@@ -29,9 +28,6 @@ class Job
 
 
 
-    /**
-     * @return string
-     */
     public function getExpression() : string
     {
         return $this->expression;
@@ -49,8 +45,6 @@ class Job
 
     /**
      * @param \DateTime|string $datetime
-     *
-     * @return bool
      */
     public function isDue($datetime = "now") : bool
     {
