@@ -11,7 +11,6 @@ class Job
      */
     protected $expression;
 
-
     /**
      * @var mixed
      */

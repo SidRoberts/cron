@@ -44,33 +44,27 @@ class ManagerTest extends Test
 
 
 
-        $this->assertEquals(
+        $this->assertCount(
             0,
-            count(
-                $cron->getDueJobs()
-            )
+            $cron->getDueJobs()
         );
 
 
 
         $cron->add($job1);
 
-        $this->assertEquals(
+        $this->assertCount(
             1,
-            count(
-                $cron->getDueJobs()
-            )
+            $cron->getDueJobs()
         );
 
 
 
         $cron->add($job2);
 
-        $this->assertEquals(
+        $this->assertCount(
             2,
-            count(
-                $cron->getDueJobs()
-            )
+            $cron->getDueJobs()
         );
     }
 }
