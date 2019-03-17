@@ -21,10 +21,8 @@ class Manager
      */
     public function getDueJobs($now = null) : array
     {
-        $jobs = $this->jobs;
-
         $jobs = array_filter(
-            $jobs,
+            $this->jobs,
             function ($job) use ($now) {
                 return $job->isDue($now);
             }
