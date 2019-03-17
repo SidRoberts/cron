@@ -2,7 +2,11 @@
 
 namespace Sid\Cron\Tests\Unit;
 
-class JobTest extends \Codeception\TestCase\Test
+use Codeception\TestCase\Test;
+
+use Sid\Cron\Job;
+
+class JobTest extends Test
 {
     /**
      * @var \UnitTester
@@ -28,7 +32,7 @@ class JobTest extends \Codeception\TestCase\Test
             "param2" => "world"
         ];
 
-        $job = new \Sid\Cron\Job(
+        $job = new Job(
             $expression,
             $data
         );
@@ -55,7 +59,7 @@ class JobTest extends \Codeception\TestCase\Test
 
         $data = "echo 'hello world'";
 
-        $cronJob = new \Sid\Cron\Job(
+        $cronJob = new Job(
             $expression,
             $data
         );

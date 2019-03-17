@@ -2,6 +2,8 @@
 
 namespace Sid\Cron;
 
+use Cron\CronExpression;
+
 class Job
 {
     /**
@@ -48,7 +50,7 @@ class Job
      */
     public function isDue($datetime = "now") : bool
     {
-        $cronExpression = \Cron\CronExpression::factory(
+        $cronExpression = CronExpression::factory(
             $this->getExpression()
         );
 

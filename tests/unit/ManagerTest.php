@@ -2,7 +2,12 @@
 
 namespace Sid\Cron\Tests\Unit;
 
-class ManagerTest extends \Codeception\TestCase\Test
+use Codeception\TestCase\Test;
+
+use Sid\Cron\Job;
+use Sid\Cron\Manager;
+
+class ManagerTest extends Test
 {
    /**
     * @var \UnitTester
@@ -21,9 +26,9 @@ class ManagerTest extends \Codeception\TestCase\Test
 
     public function testAddJobsToCron()
     {
-        $cron = new \Sid\Cron\Manager();
+        $cron = new Manager();
         
-        $job1 = new \Sid\Cron\Job(
+        $job1 = new Job(
             "* * * * *",
             [
                 "task",
@@ -32,7 +37,7 @@ class ManagerTest extends \Codeception\TestCase\Test
             ]
         );
 
-        $job2 = new \Sid\Cron\Job(
+        $job2 = new Job(
             "* * * * *",
             "echo 'hello world'"
         );
