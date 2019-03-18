@@ -8,11 +8,6 @@ use Sid\Cron\Job;
 
 class JobTest extends Test
 {
-    /**
-     * @var \UnitTester
-     */
-    protected $tester;
-
     protected function _before()
     {
     }

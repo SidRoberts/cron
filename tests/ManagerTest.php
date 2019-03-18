@@ -9,11 +9,6 @@ use Sid\Cron\Manager;
 
 class ManagerTest extends Test
 {
-   /**
-    * @var \UnitTester
-    */
-    protected $tester;
-
     protected function _before()
     {
     }
