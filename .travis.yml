@@ -6,7 +6,7 @@ php:
 sudo: false
 
 install:
-  - composer update
+  - travis_retry composer update
 
 script:
   - vendor/bin/codecept run unit
