@@ -18,15 +18,11 @@ class JobTest extends Test
 
 
 
-    public function testGetters()
+    /**
+     * @dataProvider providerGetters
+     */
+    public function testGetters(string $expression, $data)
     {
-        $expression = "* * * * *";
-
-        $data = [
-            "param1" => "hello",
-            "param2" => "world"
-        ];
-
         $job = new Job(
             $expression,
             $data
@@ -43,32 +39,25 @@ class JobTest extends Test
             $data,
             $job->getData()
         );
+    }
 
 
 
+    public function providerGetters()
+    {
+        return [
+            [
+                "expression" => "* * * * *",
+                "data"       => [
+                    "param1" => "hello",
+                    "param2" => "world",
+                ],
+            ],
 
-
-
-
-        $expression = "* * * * *";
-
-        $data = "echo 'hello world'";
-
-        $cronJob = new Job(
-            $expression,
-            $data
-        );
-
-
-
-        $this->assertEquals(
-            $expression,
-            $cronJob->getExpression()
-        );
-
-        $this->assertEquals(
-            $data,
-            $cronJob->getData()
-        );
+            [
+                "expression" => "* * * * *",
+                "data"       => "echo 'hello world'",
+            ],
+        ];
     }
 }
