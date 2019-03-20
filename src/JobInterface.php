@@ -2,10 +2,9 @@
 
 namespace Sid\Cron;
 
+use DateTime;
+
 interface JobInterface
 {
-    /**
-     * @param \DateTime|string $datetime
-     */
-    public function isDue($datetime = "now") : bool;
+    public function isDue(DateTime $datetime = null) : bool;
 }

@@ -2,14 +2,13 @@
 
 namespace Sid\Cron;
 
+use DateTime;
+
 interface ManagerInterface
 {
     public function add(JobInterface $job);
 
-    /**
-     * @param \DateTime|string $now
-     */
-    public function getDueJobs($now = null) : array;
+    public function getDueJobs(DateTime $now = null) : array;
 
     public function getAllJobs() : array;
 }

@@ -3,6 +3,7 @@
 namespace Sid\Cron;
 
 use Cron\CronExpression;
+use DateTime;
 
 class Job implements JobInterface
 {
@@ -44,10 +45,7 @@ class Job implements JobInterface
 
 
 
-    /**
-     * @param \DateTime|string $datetime
-     */
-    public function isDue($datetime = "now") : bool
+    public function isDue(DateTime $datetime = null) : bool
     {
         $cronExpression = CronExpression::factory(
             $this->getExpression()

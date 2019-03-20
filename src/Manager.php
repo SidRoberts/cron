@@ -2,6 +2,8 @@
 
 namespace Sid\Cron;
 
+use DateTime;
+
 class Manager implements ManagerInterface
 {
     /**
@@ -16,10 +18,7 @@ class Manager implements ManagerInterface
         $this->jobs[] = $job;
     }
 
-    /**
-     * @param \DateTime|string $now
-     */
-    public function getDueJobs($now = null) : array
+    public function getDueJobs(DateTime $now = null) : array
     {
         $jobs = array_filter(
             $this->jobs,
