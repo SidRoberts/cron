@@ -2,7 +2,7 @@
 
 namespace Sid\Cron;
 
-class Manager
+class Manager implements ManagerInterface
 {
     /**
      * @var array
@@ -11,7 +11,7 @@ class Manager
 
 
 
-    public function add(Job $job)
+    public function add(JobInterface $job)
     {
         $this->jobs[] = $job;
     }

@@ -4,7 +4,7 @@ namespace Sid\Cron;
 
 use Cron\CronExpression;
 
-class Job
+class Job implements JobInterface
 {
     /**
      * @var string
