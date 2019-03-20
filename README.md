@@ -12,3 +12,9 @@ A framework agnostic Cron manager.
 ```bash
 composer require sidroberts/cron
 ```
+
+
+
+## Documentation
+
+See the [Wiki](https://github.com/SidRoberts/cron/wiki).
