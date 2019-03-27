@@ -2,8 +2,13 @@
 
 A framework agnostic Cron manager.
 
-[![Build Status](https://travis-ci.org/SidRoberts/cron.svg?branch=master)](https://travis-ci.org/SidRoberts/cron)
-[![GitHub tag](https://img.shields.io/github/tag/sidroberts/cron.svg?maxAge=2592000)]()
+[![Build Status](https://img.shields.io/travis/SidRoberts/cron/2.0.x.svg?style=for-the-badge)](https://travis-ci.org/SidRoberts/cron)
+[![GitHub release](https://img.shields.io/github/release/SidRoberts/cron.svg?style=for-the-badge)]()
+
+[![License](https://img.shields.io/github/license/SidRoberts/cron.svg?style=for-the-badge)]()
+
+[![GitHub issues](https://img.shields.io/github/issues-raw/SidRoberts/cron.svg?style=for-the-badge)]()
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/SidRoberts/cron.svg?style=for-the-badge)]()
 
 
 
