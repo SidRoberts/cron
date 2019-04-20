@@ -1,42 +1,31 @@
 <?php
 
-namespace Sid\Cron\Tests\Unit;
+namespace Tests;
 
-use Codeception\TestCase\Test;
-
+use Codeception\Example;
 use Sid\Cron\Job;
 
-class JobTest extends Test
+class JobCest
 {
-    protected function _before()
-    {
-    }
-
-    protected function _after()
-    {
-    }
-
-
-
     /**
      * @dataProvider providerGetters
      */
-    public function testGetters(string $expression, $data)
+    public function getters(UnitTester $I, Example $example)
     {
         $job = new Job(
-            $expression,
-            $data
+            $example["expression"],
+            $example["data"]
         );
 
 
 
-        $this->assertEquals(
-            $expression,
+        $I->assertEquals(
+            $example["expression"],
             $job->getExpression()
         );
 
-        $this->assertEquals(
-            $data,
+        $I->assertEquals(
+            $example["data"],
             $job->getData()
         );
     }

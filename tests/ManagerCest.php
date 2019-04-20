@@ -1,25 +1,14 @@
 <?php
 
-namespace Sid\Cron\Tests\Unit;
+namespace Tests;
 
-use Codeception\TestCase\Test;
-
+use Codeception\Example;
 use Sid\Cron\Job;
 use Sid\Cron\Manager;
 
-class ManagerTest extends Test
+class ManagerCest
 {
-    protected function _before()
-    {
-    }
-
-    protected function _after()
-    {
-    }
-
-
-
-    public function testAddJobsToCron()
+    public function testAddJobsToCron(UnitTester $I)
     {
         $cron = new Manager();
         
@@ -39,7 +28,7 @@ class ManagerTest extends Test
 
 
 
-        $this->assertCount(
+        $I->assertCount(
             0,
             $cron->getDueJobs()
         );
@@ -48,7 +37,7 @@ class ManagerTest extends Test
 
         $cron->add($job1);
 
-        $this->assertCount(
+        $I->assertCount(
             1,
             $cron->getDueJobs()
         );
@@ -57,7 +46,7 @@ class ManagerTest extends Test
 
         $cron->add($job2);
 
-        $this->assertCount(
+        $I->assertCount(
             2,
             $cron->getDueJobs()
         );
