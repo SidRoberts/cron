@@ -2,7 +2,6 @@
 
 namespace Tests;
 
-use Codeception\Example;
 use Sid\Cron\Job;
 use Sid\Cron\Manager;
 
