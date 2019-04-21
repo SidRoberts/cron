@@ -7,7 +7,7 @@ use Sid\Cron\Manager;
 
 class ManagerCest
 {
-    public function testAddJobsToCron(UnitTester $I)
+    public function addJobsToCron(UnitTester $I)
     {
         $cron = new Manager();
         
