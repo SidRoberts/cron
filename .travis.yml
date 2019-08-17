@@ -3,8 +3,6 @@ language: php
 php:
   - 7.1
 
-sudo: false
-
 install:
   - travis_retry composer update --no-interaction --no-progress
 
