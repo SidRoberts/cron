@@ -8,9 +8,10 @@
 
     "authors": [
         {
-            "name":  "Sid Roberts",
-            "email": "Sid@SidRoberts.co.uk",
-            "role":  "Developer"
+            "name":     "Sid Roberts",
+            "email":    "sid@sidroberts.co.uk",
+            "homepage": "https://sidroberts.co.uk",
+            "role":     "Developer"
         }
     ],
 
