@@ -16,7 +16,7 @@ class ManagerCest
             [
                 "task",
                 "action",
-                "params"
+                "params",
             ]
         );
 
