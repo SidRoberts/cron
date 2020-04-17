@@ -28,7 +28,7 @@
     "require": {
         "php": "~7.1",
 
-        "mtdowling/cron-expression": "~1.0"
+        "dragonmantank/cron-expression": "~1.0"
     },
 
     "require-dev": {
