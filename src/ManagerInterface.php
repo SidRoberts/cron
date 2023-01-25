@@ -8,7 +8,7 @@ interface ManagerInterface
 {
     public function add(JobInterface $job);
 
-    public function getDueJobs(DateTime $now = null) : array;
+    public function getDueJobs(DateTime $now = null): array;
 
-    public function getAllJobs() : array;
+    public function getAllJobs(): array;
 }

@@ -1,9 +1,10 @@
 <?php
 
-namespace Tests;
+namespace Tests\Unit;
 
 use Sid\Cron\Job;
 use Sid\Cron\Manager;
+use Tests\Support\UnitTester;
 
 class ManagerCest
 {

@@ -6,10 +6,7 @@ use DateTime;
 
 class Manager implements ManagerInterface
 {
-    /**
-     * @var array
-     */
-    protected $jobs = [];
+    protected array $jobs = [];
 
 
 
@@ -18,7 +15,7 @@ class Manager implements ManagerInterface
         $this->jobs[] = $job;
     }
 
-    public function getDueJobs(DateTime $now = null) : array
+    public function getDueJobs(DateTime $now = null): array
     {
         $jobs = array_filter(
             $this->jobs,
@@ -30,7 +27,7 @@ class Manager implements ManagerInterface
         return $jobs;
     }
 
-    public function getAllJobs() : array
+    public function getAllJobs(): array
     {
         return $this->jobs;
     }

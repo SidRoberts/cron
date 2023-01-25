@@ -4,7 +4,7 @@ namespace Sid\Cron;
 
 class Factory
 {
-    public static function buildFromArray(array $array) : Manager
+    public static function buildFromArray(array $array): Manager
     {
         $manager = new Manager();
 

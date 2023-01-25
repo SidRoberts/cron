@@ -7,10 +7,7 @@ use DateTime;
 
 class Job implements JobInterface
 {
-    /**
-     * @var string
-     */
-    protected $expression;
+    protected string $expression;
 
     /**
      * @var mixed
@@ -30,7 +27,7 @@ class Job implements JobInterface
 
 
 
-    public function getExpression() : string
+    public function getExpression(): string
     {
         return $this->expression;
     }
@@ -45,11 +42,15 @@ class Job implements JobInterface
 
 
 
-    public function isDue(DateTime $datetime = null) : bool
+    public function isDue(DateTime $datetime = null): bool
     {
-        $cronExpression = CronExpression::factory(
+        $cronExpression = new CronExpression(
             $this->getExpression()
         );
+
+        if (!$datetime) {
+            $datetime = new DateTime("now");
+        }
 
         return $cronExpression->isDue($datetime);
     }

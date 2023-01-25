@@ -1,9 +1,10 @@
 <?php
 
-namespace Tests;
+namespace Tests\Unit;
 
 use Codeception\Example;
 use Sid\Cron\Job;
+use Tests\Support\UnitTester;
 
 class JobCest
 {
