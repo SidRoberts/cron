@@ -2,4 +2,4 @@ vendor/
 
 composer.lock
 
-tests/Support/_generated/
+tests/support/_generated/

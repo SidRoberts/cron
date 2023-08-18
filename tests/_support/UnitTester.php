@@ -1,10 +1,8 @@
 <?php
-
-namespace Tests\Support;
+namespace Tests;
 
 /**
  * Inherited Methods
- *
  * @method void wantToTest($text)
  * @method void wantTo($text)
  * @method void execute($callable)
@@ -17,7 +15,7 @@ namespace Tests\Support;
  * @method void pause()
  *
  * @SuppressWarnings(PHPMD)
- */
+*/
 class UnitTester extends \Codeception\Actor
 {
     use _generated\UnitTesterActions;

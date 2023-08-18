@@ -4,7 +4,7 @@ namespace Tests\Unit;
 
 use Sid\Cron\Job;
 use Sid\Cron\Manager;
-use Tests\Support\UnitTester;
+use Tests\UnitTester;
 
 class ManagerCest
 {
